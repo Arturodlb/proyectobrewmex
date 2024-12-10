@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - Brewmex</title>
+    <style>
+        /* Estilo del contenedor del carrusel */
+        .carousel {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        h1{
+            text-align: center;
+        }
+       
+
+        /* Imágenes dentro del carrusel */
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-images img {
+            width: 100%;
+            flex-shrink: 0;
+            height: 400px;
+            object-fit: contain;
+        }
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform:translateY(-50%);
+            background-color:rgba(0, 0, 0, 0.5);
+            color:#fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size:20px;
+            z-index: 10;
+        }
+        .carousel-button.left {
+left: 10px;
+}
+
+.carousel-button.right {
+right: 10px;
+}
+
+.carousel-button:hover {
+background-color: rgba(0, 0, 0, 0.8);
+}
+
+        /* Animación de deslizamiento */
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(0); }
+            25% { transform: translateX(-100%); }
+            45% { transform: translateX(-100%); }
+            50% { transform: translateX(-200%); }
+            70% { transform: translateX(-200%); }
+            75% { transform: translateX(-300%); }
+            95% { transform: translateX(-300%); }
+            100% { transform: translateX(-400%); }
+        }
+    </style>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Nosotros</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="mision.html">Misión</a></li>
+                <li><a href="vision.html">Visión</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
+                <li><a href="formulario.html">Formulario</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Nosotros</h2>
+            <p> En BrewMex, no sólo servimos café; Creamos experiencias que cuentan una historia. Nuestro viaje comienza con la selección de los mejores granos de café, obtenidos directamente de las exuberantes plantaciones de café de Guerrero. Estos granos se someten a un meticuloso proceso de mezcla, donde los sabores se combinan armoniosamente para crear nuestras mezclas exclusivas. Este proceso no sólo garantiza un sabor excepcional sino que también honra la tradición centenaria del cultivo del café en México.</p>
+            <h2>Historia y Valores</h2>
+            <p>Fundada en 2024,  Situada en el corazón de Guerrero, México, nuestra marca surge de una rica herencia cafetera, 
+                mezclando meticulosamente sabores que no sólo tentan las papilas gustativas sino que 
+                también satisfacen las diversas necesidades de los consumidores actuales preocupados por su 
+                salud.
+                 Lo que nos distingue es nuestro compromiso inquebrantable de elaborar mezclas que sean 
+                suaves para el estómago, calmantes para la ansiedad y propicias para un sueño reparador. 
+                Además, incorporamos adaptógenos naturales como la maca en nuestras mezclas, que pueden 
+                ayudar a mejorar la resistencia al estrés y promover el equilibrio general del cuerpo.
+                 Con un enfoque meticuloso en mejorar el bienestar general sin comprometer el sabor, cada 
+                taza de café BrewMex es un testimonio de nuestra dedicación a armonizar la indulgencia y el 
+                bienestar. Además, trabajamos en estrecha colaboración con las comunidades agrícolas 
+                locales para garantizar que nuestros granos de café se obtengan de manera sostenible</p>
+            <ul>
+                <li> Calidad de producción:Esto signi ca que todas nuestras semillas de café, sin 
+                   excepción, pasarán por pruebas exhaustivas, donde se veri cará si el envase puede 
+                   salir al mercado o no, y que el café producido sea 100% café. natural, sin ningún 
+                   otro ingrediente químico que pueda cambiar el sabor, ya sea para darle un mejor 
+                   sabor o para maximizar costos</li>
+                <li>Calidad de diseño: Los empaques de Brewmex han pasado por un largo proceso, 
+                    pues, evaluando el mercado del café y analizando la forma en que las empresas 
+                    diseñan sus empaques, hemos observado que los empaques de café no son del 
+                    todo cómodos, al momento de agarrarlo y que el espacio lo que ocupa en una 
+                    alacena es muy grande, por eso Brewmex ha elaborado un envase que además de 
+                    ser cómodo de sostener y que no ocupa tanto espacio en una alacena, ha creado un 
+                    empaque que es ecológico. y que al ser desechado, no deje huella contaminante</li>
+                <li> Calidad al cliente: El servicio que le ofrecerá Brewmex será un servicio de calidad, 
+                    donde el cliente se sienta cómodo en la forma en que lo tratan los empleados de 
+                    Brewmex, así como en Brewmex sabemos que la atención al cliente es fundamental 
+                    para que el usuario compre un producto que es no necesariamente café, y que el 
+                    trato que se brinde a los usuarios de Brewmex sea digno y amigable, donde no haya 
+                    lugar a la discriminación o desigualdad.</li>
+            </ul>
+            <div class="carousel">
+                <button class="carousel-button left" onclick="moveSlide(-1)">&#8249;</button>
+                <div class="carousel-images">
+                    <img src="imagenes/cafe1.jpeg" alt="Imagen 1">
+                    <img src="imagenes/cafe2.jpeg" alt="Imagen 2">
+                    <img src="imagenes/cafe3.jpeg" alt="Imagen 3">
+                    <img src="imagenes/cafe4.jpeg" alt="Imagen 4">
+                    <img src="imagenes/cafe5.jpeg" alt="Imagen 5">
+                </div>
+                <button class="carousel-button right" onclick="moveSlide(1)">&#8250;</button>
+            </div>
+            
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Brewmex. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        const carouselImages = document.querySelector('.carousel-images');
+        const images = document.querySelectorAll('.carousel-images img');
+        let currentIndex = 0;
+        const totalImages = images.length;
+        const slideInterval = 3000; // Tiempo en milisegundos para la transición automática
+        let interval;
+        
+        // Mover las imágenes manualmente
+        function moveSlide(direction) {
+        currentIndex += direction;
+        
+        if (currentIndex < 0) {
+        currentIndex = totalImages - 1; // Ir al último
+        } else if (currentIndex >= totalImages) {
+        currentIndex = 0; // Regresar al primero
+        }
+        
+        updateSlide();
+        resetInterval(); // Reiniciar la transición automática después de la interacción
+        }
+        
+        // Actualizar la posición del carrusel
+        function updateSlide() {
+        const offset = -currentIndex * 100;
+        carouselImages.style.transform = `translateX(${offset}%)`;
+        }
+        
+        // Transición automática
+        function startAutoSlide() {
+        interval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % totalImages;
+        updateSlide();
+        }, slideInterval);
+        }
+        
+        // Reiniciar el temporizador de la transición automática
+        function resetInterval() {
+        clearInterval(interval);
+        startAutoSlide();
+        }
+        
+        // Iniciar la transición automática al cargar la página
+        startAutoSlide();
+        </script>
+</body>
+</html>
